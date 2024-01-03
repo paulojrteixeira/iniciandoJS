@@ -1,1 +1,1 @@
-console.log("bom dia,brasil");
+console.log("bom dia,brasil")
