@@ -5,8 +5,6 @@ let C = ((F-32) /9);
  console.log(C *5);
  /// RESULTADO ---- 22.77777777777778    ///
 
- 
-
 /*  ///    CORREÇÃO ///
     let F = 73;
     let C = ((F-32) /9 * 5);
