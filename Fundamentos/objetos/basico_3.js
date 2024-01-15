@@ -6,4 +6,5 @@ const data = {
 
 data.dia = 21
 data.mes = 12
+
 console.log(`${data.dia}/${data.mes}/${data.ano}`)
