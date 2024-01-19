@@ -53,3 +53,36 @@ console.log(calendario())
  ////////////---------------------------/////////////////////////------------------------------
 
  /// #5
+
+let a = 10
+let b = 5
+function maiorOuIgual() {
+
+    if (a >= b)
+        return true
+    else ( a != b)
+    return false
+}
+
+console.log(maiorOuIgual());  /// true 
+
+ ////////////---------------------------/////////////////////////------------------------------
+
+ /// #6
+
+ function inverso(valor) {
+    const tipo = typeof valor
+    if (tipo == "boolean")
+        return !valor
+    else if (tipo == "number")
+        return -valor
+    else
+        return `boleano ou números esperados, mas o parâmetro é do tipo ${tipo}`
+}
+
+console.log(inverso(999));  /// -999
+
+ ////////////---------------------------/////////////////////////------------------------------
+
+ /// #7
+ 
