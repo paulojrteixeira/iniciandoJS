@@ -8,6 +8,7 @@ console.log(cumprimentar());
 ////////////---------------------------/////////////////////////------------------------------
 
 /// #2
+console.log('\n')
 
 function idade() {
     const diasAno = 365
@@ -19,6 +20,7 @@ console.log(idade()); /// 9125 dias
 ////////////---------------------------/////////////////////////------------------------------
 
 /// #3
+console.log('\n')
 
 function calcularSalario() {
     const horasTrabalhadas = 6
@@ -31,6 +33,7 @@ console.log('O Salário igual a', + calcularSalario()); /// O Salário igual a 7
 ////////////---------------------------/////////////////////////------------------------------
 
 /// #4
+console.log('\n')
 
 function calendario() {
     switch (9) {
@@ -53,6 +56,7 @@ console.log(calendario())
 ////////////---------------------------/////////////////////////------------------------------
 
 /// #5
+console.log('\n')
 
 let a = 10
 let b = 5
@@ -69,6 +73,7 @@ console.log(maiorOuIgual());  /// true
 ////////////---------------------------/////////////////////////------------------------------
 
 /// #6
+console.log('\n')
 
 function inverso(valor) {
     const tipo = typeof valor
@@ -85,6 +90,7 @@ console.log(inverso(999));  /// -999
 ////////////---------------------------/////////////////////////------------------------------
 
 /// #7
+console.log('\n')
 
 function multiplicar(num1, num2) {
     let resultado = 0
@@ -98,6 +104,7 @@ console.log(multiplicar(5, 5));  ///25
 ////////////---------------------------/////////////////////////------------------------------
 
 /// #8
+console.log('\n')
 
 function repetir(elemento, numero) {
     let resultado = []
@@ -112,6 +119,7 @@ console.log(repetir(6, 2));     /// [6, 6]
 ////////////---------------------------/////////////////////////------------------------------
 
 /// #9
+console.log('\n')
 
 function simbolo(vezes) {
     return "+".repeat(vezes);
@@ -122,6 +130,7 @@ console.log(simbolo(5));        /// +++++
 ////////////---------------------------/////////////////////////------------------------------
 
 /// #10
+console.log('\n')
 
 function mostrarPrimeiroEUltimo() {
     const array = [1, 2, 3, 'ultimo'];
@@ -135,6 +144,7 @@ console.log(mostrarPrimeiroEUltimo());      /// [1, ultimo]
 ////////////---------------------------/////////////////////////------------------------------
 
 /// #11
+console.log('\n')
 
 function removerPropriedade(objeto, propriedade) {
     const copia = {...objeto}       /// SPREAD(...) --> PERMITE QUE EXPANDA OS VALORES DE ARRAY/OBJETOS, DENTRO DE OUTROS ARRAY/OBJETOS
@@ -153,4 +163,43 @@ descricao: "Não preenchido"
 ////////////---------------------------/////////////////////////------------------------------
 
 /// #12
+console.log('\n')
+
+function filtrarNumeros(array) {
+    let resultado = []
+    for (let itens of array) {
+        if (typeof itens === 'number')
+            resultado.push(itens);
+    }
+    console.log(resultado)
+}
+
+filtrarNumeros(["Javascript", 1, "3", "Web", 20])    /// [1, 20] 
+filtrarNumeros(["a", "c"])      /// []
+
+////////////---------------------------/////////////////////////------------------------------
+
+/// #13
+console.log('\n')
+
+function objetoParaArray(objeto) {
+    let resultado = []
+    for (let elemento in objeto) {
+        resultado.push([elemento, objeto[elemento]])
+    }
+    console.log(resultado)
+}
+objetoParaArray({ 
+    nome: "Maria", 
+     profissao: "Desenvolvedora de software" 
+    })       /// [["nome", "Maria"], ["profissao", "Desenvolvedora de Software"]] 
+    objetoParaArray({ 
+    codigo: 11111, 
+     preco: 12000 
+    })      /// [["codigo", 11111], ["preco", 12000]] 
+
+    ////////////---------------------------/////////////////////////------------------------------
+
+/// #13
+console.log('\n')
 
