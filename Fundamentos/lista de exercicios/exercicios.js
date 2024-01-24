@@ -93,7 +93,7 @@ function multiplicar(num1, num2) {
     return resultado
 }
 
-console.log(multiplicar(5, 5))  ///25
+console.log(multiplicar(5, 5));  ///25
 
 ////////////---------------------------/////////////////////////------------------------------
 
@@ -106,7 +106,7 @@ function repetir(elemento, numero) {
     return resultado
 }
 
-console.log(repetir(6, 2))
+console.log(repetir(6, 2));     /// [6, 6]      
 
 
 ////////////---------------------------/////////////////////////------------------------------
@@ -114,10 +114,10 @@ console.log(repetir(6, 2))
 /// #9
 
 function simbolo(vezes) {
-    return "+".repeat(vezes)
+    return "+".repeat(vezes);
 }
 
-console.log(simbolo(5))
+console.log(simbolo(5));        /// +++++
 
 ////////////---------------------------/////////////////////////------------------------------
 
@@ -130,8 +130,27 @@ function mostrarPrimeiroEUltimo() {
     return [primeiroElemento, ultimoElemento]
 
 }
-console.log(mostrarPrimeiroEUltimo());
+console.log(mostrarPrimeiroEUltimo());      /// [1, ultimo]
 
 ////////////---------------------------/////////////////////////------------------------------
 
 /// #11
+
+function removerPropriedade(objeto, propriedade) {
+    const copia = {...objeto}       /// SPREAD(...) --> PERMITE QUE EXPANDA OS VALORES DE ARRAY/OBJETOS, DENTRO DE OUTROS ARRAY/OBJETOS
+    delete copia [propriedade]
+    console.log(copia);
+}
+removerPropriedade({a: 1, b: 2}, "a") ///{b: 2}
+removerPropriedade({
+id: 20,
+nome: "caneta",
+descricao: "Não preenchido"
+}, "descricao");     ///{id: 20, nome: "caneta"}
+
+//// EXERCICIO MAIS COMPLICADO POR ENQUANTO, NÃO CONSEGUI FAZER SOZINHO, TIVE QUE OLHAR A RESOLUÇÃO ///
+
+////////////---------------------------/////////////////////////------------------------------
+
+/// #12
+
