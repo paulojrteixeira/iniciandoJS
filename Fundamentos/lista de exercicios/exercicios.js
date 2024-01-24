@@ -147,15 +147,15 @@ console.log(mostrarPrimeiroEUltimo());      /// [1, ultimo]
 console.log('\n')
 
 function removerPropriedade(objeto, propriedade) {
-    const copia = {...objeto}       /// SPREAD(...) --> PERMITE QUE EXPANDA OS VALORES DE ARRAY/OBJETOS, DENTRO DE OUTROS ARRAY/OBJETOS
-    delete copia [propriedade]
+    const copia = { ...objeto }       /// SPREAD(...) --> PERMITE QUE EXPANDA OS VALORES DE ARRAY/OBJETOS, DENTRO DE OUTROS ARRAY/OBJETOS
+    delete copia[propriedade]
     console.log(copia);
 }
-removerPropriedade({a: 1, b: 2}, "a") ///{b: 2}
+removerPropriedade({ a: 1, b: 2 }, "a") ///{b: 2}
 removerPropriedade({
-id: 20,
-nome: "caneta",
-descricao: "Não preenchido"
+    id: 20,
+    nome: "caneta",
+    descricao: "Não preenchido"
 }, "descricao");     ///{id: 20, nome: "caneta"}
 
 //// EXERCICIO MAIS COMPLICADO POR ENQUANTO, NÃO CONSEGUI FAZER SOZINHO, TIVE QUE OLHAR A RESOLUÇÃO ///
@@ -189,17 +189,34 @@ function objetoParaArray(objeto) {
     }
     console.log(resultado)
 }
-objetoParaArray({ 
-    nome: "Maria", 
-     profissao: "Desenvolvedora de software" 
-    })       /// [["nome", "Maria"], ["profissao", "Desenvolvedora de Software"]] 
-    objetoParaArray({ 
-    codigo: 11111, 
-     preco: 12000 
-    })      /// [["codigo", 11111], ["preco", 12000]] 
+objetoParaArray({
+    nome: "Maria",
+    profissao: "Desenvolvedora de software"
+})       /// [["nome", "Maria"], ["profissao", "Desenvolvedora de Software"]] 
+objetoParaArray({
+    codigo: 11111,
+    preco: 12000
+})      /// [["codigo", 11111], ["preco", 12000]] 
 
-    ////////////---------------------------/////////////////////////------------------------------
+////////////---------------------------/////////////////////////------------------------------
 
-/// #13
+/// #14
 console.log('\n')
 
+function receberSomenteOsParesDeIndicesPares(array) {
+    let resultado = []
+    for (let i = 0; i < array.length; i += 2) {
+        const numerosPares = array[i] % 2 == 0
+        if (numerosPares)
+            resultado.push(array[i])
+    }
+    console.log(resultado);
+
+}
+receberSomenteOsParesDeIndicesPares([1, 2, 3, 4])       /// [] 
+receberSomenteOsParesDeIndicesPares([10, 70, 22, 43])   /// [10, 22]
+
+////////////---------------------------/////////////////////////------------------------------
+
+/// #15
+console.log('\n')
