@@ -220,3 +220,18 @@ receberSomenteOsParesDeIndicesPares([10, 70, 22, 43])   /// [10, 22]
 
 /// #15
 console.log('\n')
+
+function checarAnoBissexto(ano) {
+    let multiploDeQuatro = ano % 4 == 0
+    let multiploDeCem  = ano % 100 == 0 // nao pode ser multiplo de 100 --> operador !(negacao)
+    let multiploDeQuatrocentos  = ano % 400 == 0 // exceto se tambem for multiplo de 400 --> operador ||(OU)
+    return (multiploDeQuatro && !multiploDeCem) || multiploDeQuatrocentos
+} 
+// checarAnoBissexto(2020) /// true
+// checarAnoBissexto(2100) ///  false, pois é múltiplo de 100 e não é múltiplo de 400
+
+console.log(checarAnoBissexto(2100))
+
+////////////---------------------------/////////////////////////------------------------------
+
+/// #16
