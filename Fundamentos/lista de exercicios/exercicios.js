@@ -223,15 +223,52 @@ console.log('\n')
 
 function checarAnoBissexto(ano) {
     let multiploDeQuatro = ano % 4 == 0
-    let multiploDeCem  = ano % 100 == 0 // nao pode ser multiplo de 100 --> operador !(negacao)
-    let multiploDeQuatrocentos  = ano % 400 == 0 // exceto se tambem for multiplo de 400 --> operador ||(OU)
+    let multiploDeCem = ano % 100 == 0 // nao pode ser multiplo de 100 --> operador !(negacao)
+    let multiploDeQuatrocentos = ano % 400 == 0 // exceto se tambem for multiplo de 400 --> operador ||(OU)
     return (multiploDeQuatro && !multiploDeCem) || multiploDeQuatrocentos
-} 
+}
 // checarAnoBissexto(2020) /// true
 // checarAnoBissexto(2100) ///  false, pois é múltiplo de 100 e não é múltiplo de 400
 
-console.log(checarAnoBissexto(2100))
+console.log(checarAnoBissexto(2100));
 
 ////////////---------------------------/////////////////////////------------------------------
 
 /// #16
+console.log('\n')
+
+function somarNumeros(numeros) {
+    let soma = 0
+    numeros.forEach(numero => soma += numero)
+    console.log(soma);
+
+}
+somarNumeros([10, 10, 10])      /// retornará 30 
+somarNumeros([15, 15, 15, 15])  /// retornará 60
+
+////////////---------------------------/////////////////////////------------------------------
+
+/// #17
+console.log('\n')
+
+function despesasTotais(produtos) {
+    let resultado = 0
+    for (let item of produtos)
+        resultado += item.preco
+    console.log(resultado);
+
+}
+despesasTotais([
+    { nome: "Jornal online", categoria: "Informação", preco: 89.99 },
+    { nome: "Cinema", categoria: "Entretenimento", preco: 150 }
+])      /// retornará 239.99
+despesasTotais([
+    { nome: "Galaxy S20", categoria: "Eletrônicos", preco: 3599.99 },
+    { nome: "Macbook Pro", categoria: "Eletrônicos", preco: 30999.90 }
+])      /// retornará 34599.89
+
+////////////---------------------------/////////////////////////------------------------------
+
+/// #18
+console.log('\n')
+
